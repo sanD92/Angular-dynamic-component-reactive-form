@@ -1,0 +1,305 @@
+
+
+https://devdocs.io/ -- offline documentation
+
+https://www.30secondsofcode.org/
+https://www.theodinproject.com/
+https://www.frontendmentor.io/
+https://codemyui.com/
+https://shortcuts.design/
+https://daily.dev/
+https://www.devsamples.com/
+
+
+// print "this" as person object and fname as 'sandip'
+// Pass current object .ie person in arrow function
+// In arrow function "this" always point to window / global object
+// you can modify code as you want
+// you can use other helper function if you need to pass object as parameter
+
+/* let person = {
+  fname:'sandip'
+}
+
+ const arrFn =()=>{
+    console.log(this);
+    console.log(this.fname);
+ };
+
+ const a = arrFn.bind(person);
+ a();
+ */
+/* let person = {
+  fname:'sandip'
+} */
+
+/* const a = arrFn.bind(person);
+a(); */
+
+/* function helperBindFunction(_person){
+console.log(this);
+  const arrFn =()=>{
+    console.log(this.fname);
+  };
+  
+  arrFn();
+}
+
+helperBindFunction.call(person); */
+
+
+
+
+/* let person = {
+  fname:'sandip'
+}; */
+
+/* const dispalyName =()=>{
+    console.log(this.fname);
+ };
+ 
+ const dispalyNameOne = function(){
+    console.log(this.fname);
+ };
+ 
+ // dispalyName.call(person);
+ // dispalyNameOne.call(person);
+ 
+ 
+ 
+ let arrA = [1,2,3,4,5];
+ let arrB = arrA;
+ arrA=[];
+ 
+ console.log(arrA); */
+ /* console.log(arrB) */
+ 
+ 
+ /* let arrC = [1,2,3,4,5];
+ let arrD = arrA;
+ arrC.length = 0;
+ console.log(arrC);
+ console.log(arrD)
+ 
+ 
+ var arrayA = [1,2,3,4,5];
+ 
+ function clearUsingLength (ar) {
+    ar.length = 0;
+ }
+ 
+ function clearByOverwriting(ar) {
+    ar = [];
+ }
+ 
+ alert("Original Length: " + arrayA.length);
+ clearByOverwriting(arrayA);
+ alert("After Overwriting: " + arrayA.length);
+ clearUsingLength(arrayA);
+ alert("After Using Length: " + arrayA.length); */
+ 
+ 
+ function addFn(){
+ // other way to make array 
+ // Array.prototype.slice.call(arguments);
+ // Array.from(arguments)
+ // [...arguments]
+ var args = [].slice.call(arguments);
+ console.log(args);
+ console.log(eval(args.join('+')));
+ };
+ 
+ addFn(10,20,20);
+ 
+ 
+Shadow DOM  
+ - encapsulate the inner structure of an element
+ - Shadow DOM allows hidden DOM trees to be attached to elements in the regular DOM tree — this shadow DOM tree starts with a shadow root, 
+   underneath which can be attached to any elements you want, in the same way as the normal DOM.
+ 
+Shadow host: The regular DOM node that the shadow DOM is attached to.
+Shadow tree: The DOM tree inside the shadow DOM.
+Shadow boundary: the place where the shadow DOM ends, and the regular DOM begins.
+Shadow root: The root node of the shadow tree.
+ 
+ 
+ 
+ 
+ 
+ Array Comparison
+ 
+ The Abstract Relational Comparison Algorithm converts both operands to primitives.
+ Two arrays will never be == or ===, as long as they refer to different arrays (even if they look the same or have the same contents). 
+ The comparison for arrays (which are objects) is by reference,and two new arrays aren't the same reference at all.
+ As for the < and > - I'm pretty sure the arrays are converted to string (like [1, 2, 3] is converted to 1,2,3) and compared (like alphabetically)
+ you are actually comparing if they are the same reference(e.g point to the same memory address)
+ 
+ 
+ Array([],null,undefined,null) == ",,,";
+ In JavaScript the == operator will perform all the type casts/conversions it can perform to check for equality. 
+ It will try to compare a String with String, at which point the left hand side, 
+ the Array will be converted to a String using a simple toString() call!
+ 
+ 
+ 
+typeof new String("sandip") ==> "object"
+typeof new String("andip").valueOf(); ==>"string"
+
+JavaScript compares strings by the order of Unicode codepoints and lexicographically compares UTF-16 code units.
+From your question:
+'bc' > 'ac' // Because 'b' comes after 'a'.
+
+
+
+[1,2,3] === [1,2,3]
+[1,2,3] == [1,2,3]
+[1,2,3] < [1,2,3]
+[1,2,3] > [1,2,3] --> string comparsion way
+false
+
+false
+
+"sandip" ==="sandip"
+new String("sandip") == new String("sandip")
+new String("sandip") === new String("sandip")
+
+// falsy value false,0,-0,0n,null undefined NaN ""
+
+Agent- 
+ClientAssociatedWithAgent
+id: 182013
+177416,
+
+TestAccount9 
+
+
+Object.defineProperty( newObject, "someKey", {
+    value: "for more control of the property's behavior",
+    writable: true,
+    enumerable: true,
+    configurable: true
+});
+
+
+var rauhlExpectations ={
+	city:['punekar', 'nagpurkar', 'mumbaikar'],
+	cook:'one time',
+	height:'5.4'
+	weight:'55',
+	nameStartWIth:'P'
+}
+
+Object.freeze(expectations);
+
+findGirls(mulgaychaName){
+	girlName={};
+	// API call filter out based on city hight,weight etx object parameter.
+	fakeAPICall().subscribe((sthal)=>{girlName = sthal.g.details} );
+	
+	console.log(`${this.mulgaychaName} : list of sugeestion ${girlName}`)
+}
+
+findGirls.call(rauhlExpectations,'Rahul')
+
+
+Request URL: http://localhost:4200/api/person/191754/company
+Request Method: GET
+Status Code: 200 OK
+
+
+
+Request URL: http://localhost:4200/api/person/%7BapplicationId%7D/company
+Request Method: PUT
+Status Code: 400 Bad Request
+
+
+// Pattern repeat
+//a1b2c3
+//abbccc
+patternReadConvert("a1b2c3c4d5");
+function patternReadConvert(a){
+  let splitString = a.split("");
+  let count=0;
+  let letter='';
+  let temp =[];
+  // console.log('splitString',splitString);
+   for(let i=0;i<splitString.length;i++){
+		if(Number.isNaN(Number(splitString[i]))){
+    	// console.log("str",splitString[i]);
+      letter = splitString[i];
+    }else{
+    	count = splitString[i];
+  	  // console.log("count",splitString[i]);
+      if(count>0){
+       // console.log('inside else if')
+       let a = repeatString(letter,count);
+       // console.log("a",a);
+       temp.push(a);
+      }
+     
+    }
+   }
+   
+   console.log(temp.toString().split(",").join(""));
+}
+
+ function repeatString(str,countRepeat){
+  finalString="";
+  temp =[];
+  for(let i =1;i<=countRepeat;i++){
+     finalString = finalString + str;
+  }
+  return finalString;
+}
+
+
+
+Question:
+//abbccc
+//a1b2c3
+
+// printLaterAndCount("ccc");
+function printLaterAndCount(str){
+  splitStr= str.split("");
+  const length = splitStr.length;
+	 /* console.log(splitStr[0]+length); */
+ 	return splitStr[0]+length;
+}
+
+function filterOutArray(_splitStr,key){
+return  _splitStr.filter((_ele)=>_ele===key)
+}
+
+extractStringFn("abbcccdddddeeeeeeeeeeeee");
+function extractStringFn(_str){
+		let splitStr= _str.split("");
+    let compareKeyArray = new Set(splitStr);
+    let temp=[];
+    let final=[]
+    compareKeyArray.forEach((_ele)=>{
+   		temp.push(filterOutArray(splitStr,_ele))
+    });
+    
+    /*  console.log("All Available array",temp); */
+    
+    temp.forEach((arr)=>{
+    	/* console.log(arr.join("").toString()); */
+      let a= printLaterAndCount(arr.join("").toString());
+      final.push(a);
+     
+    })
+    
+    console.log('final',final.join("").toString());
+   
+    /* temp.push(printLaterAndCount(a.join("")))
+    temp.push(printLaterAndCount(b.join("")))
+    temp.push(printLaterAndCount(c.join("")))
+    console.log("Result",temp.join("").toString()) */
+  
+}
+
+
+
+
+
+
