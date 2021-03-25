@@ -1,0 +1,23 @@
+<!-- <header style="background-color: aqua;">I am Header</header>
+<hr> -->
+
+<h1 style="text-align: center;">{{title}}</h1>
+<!-- <button type="button" color="primary" mat-button
+  (click)="welcomeFn('Welcone component load dyanamically')">Welcome</button>
+<br><br><br>
+<button type="button" color="primary" mat-button
+  (click)="notWelcomeFn('Not welcome still component load dyanmically')">Not Welcome</button>
+<template #messageconatiner></template> -->
+
+<app-dynamic-form [formFields]="formFieldsObejct"></app-dynamic-form>
+
+<div class="container">
+  <div id="output" style="font-size: large;font-weight: bold;">
+
+  </div>
+</div>
+
+
+<!-- <hr>
+<footer style="background-color: aqua;">I am Footer</footer> -->
+<router-outlet></router-outlet>
