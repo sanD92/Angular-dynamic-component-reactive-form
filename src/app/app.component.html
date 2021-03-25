@@ -9,13 +9,25 @@
   (click)="notWelcomeFn('Not welcome still component load dyanmically')">Not Welcome</button>
 <template #messageconatiner></template> -->
 
-<app-dynamic-form [formFields]="formFieldsObejct"></app-dynamic-form>
-
 <div class="container">
+  <p style="font-weight: bold;">ngComponentOutlet use</p>
+  <mat-tab-group>
+    <mat-tab *ngFor="let tab of dynamicTabs" [label]="tab.label">
+      <ng-container *ngComponentOutlet="tab.component">
+      </ng-container>
+    </mat-tab>
+  </mat-tab-group>
+  <div class="row">
+    <p style="text-align: center;font-weight: bold;">ViewContainerRef and ComponentFactoryResolver uses</p>
+    <app-dynamic-form [formFields]="formFieldsObejct"></app-dynamic-form>
+  </div>
+</div>
+
+<!-- <div class="container">
   <div id="output" style="font-size: large;font-weight: bold;">
 
   </div>
-</div>
+</div> -->
 
 
 <!-- <hr>

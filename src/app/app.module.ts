@@ -6,9 +6,9 @@ import { AppComponent } from './app.component';
 import { MessageComponentComponent } from './message-component/message-component.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DynamicFormComponent } from './dynamic-form/dynamic-form..component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DyanmicFormInputComponent } from './dynamic-form-component/dynamic-form-input.component';
-
+import {MatTabsModule} from '@angular/material/tabs';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,6 +21,9 @@ import { DyanmicFormInputComponent } from './dynamic-form-component/dynamic-form
     AppRoutingModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -3,6 +3,8 @@ import { Observable, Subject, asapScheduler, pipe, of, from, interval, merge, fr
 import { FormFieldControlService } from './data-service/form-field-control.service';
 import { MessageComponentComponent } from './message-component/message-component.component';
 import { FormField } from './model/form-field';
+import { UserInformationComponent } from './user-info/user-info.component';
+import { PaymentComponent } from './user-payment/payment.component';
 
 @Component({
   selector: 'app-root',
@@ -15,6 +17,16 @@ export class AppComponent implements OnInit {
   // componentRef: any;
   // @ViewChild('messageconatiner', { read: ViewContainerRef }) _messageconatiner?: ViewContainerRef;
   formFields: Observable<FormField<any>[]>;
+  public dynamicTabs = [
+    {
+      label: 'User Information',
+      component: UserInformationComponent
+    },
+    {
+      label: 'Payment',
+      component: PaymentComponent
+    }
+  ];
   constructor(private resolver: ComponentFactoryResolver, formFieldService: FormFieldControlService) {
     this.formFields = formFieldService.getFormFields();
     this.formFields.subscribe((data) => {
